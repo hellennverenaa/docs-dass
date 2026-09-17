@@ -38,9 +38,9 @@ O TypeORM é o padrão corporativo oficial para mapeamento objeto-relacional e c
 ### 3.3. Exclusão de Registros (Soft Delete)
 
 - Por padrão de conformidade e auditoria fabril, dados não são excluídos fisicamente do banco de dados relacional. Devem ser adotadas marcas de exclusão lógica, garantindo rastreabilidade histórica e conformidade com auditorias operacionais.
+---
 
-
-## Fluxo Comparativo: Data Mapper vs Active Record
+## Fluxo Comparativo: Data Mapper (Obrigatório) vs Active Record (Proibido)
 
 ```mermaid
 flowchart LR
