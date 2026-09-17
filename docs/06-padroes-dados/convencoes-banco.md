@@ -51,6 +51,8 @@ Nenhuma tabela de domínio de negócio pode ser criada sem a estrutura de govern
 
 - Tabelas destinadas a coletas de alta frequência (leituras de esteiras, sensores industriais, telemetria e registros de passagem de materiais) devem conter no máximo três índices estritamente indispensáveis. O excesso de índices é proibido nessas estruturas para não penalizar a velocidade de escrita do chão de fábrica.
 
+---
+
 ## Fluxo de Integridade: UUIDv7 e Exclusão Lógica
 
 ```mermaid
