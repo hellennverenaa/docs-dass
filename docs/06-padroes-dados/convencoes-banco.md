@@ -50,3 +50,25 @@ Nenhuma tabela de domínio de negócio pode ser criada sem a estrutura de govern
 ### 4.4. Política de Limite de Índices em Chão de Fábrica
 
 - Tabelas destinadas a coletas de alta frequência (leituras de esteiras, sensores industriais, telemetria e registros de passagem de materiais) devem conter no máximo três índices estritamente indispensáveis. O excesso de índices é proibido nessas estruturas para não penalizar a velocidade de escrita do chão de fábrica.
+
+## Fluxo de Integridade: UUIDv7 e Exclusão Lógica
+
+```mermaid
+flowchart TD
+    subgraph UUID_FLOW [Geracao de Chaves Primarias: UUIDv7]
+        T_STAMP[Timestamp Ordenado por Tempo]
+        R_BITS[Bits de Aleatoriedade Global]
+        PK_FINAL[UUIDv7: Ordenado no Indice B-Tree sem Fragmentacao]
+        T_STAMP --> PK_FINAL
+        R_BITS --> PK_FINAL
+    end
+
+    subgraph SOFT_DELETE_FLOW [Ciclo de Exclusao Logica]
+        REG_ATIVO[Registro Ativo: deleted_at = NULL]
+        ACAO_EXCLUIR[Comando de Exclusao]
+        REG_INATIVO[Registro Inativo: deleted_at = TIMESTAMP UTC]
+
+        REG_ATIVO -->|Operador solicita exclusao| ACAO_EXCLUIR
+        ACAO_EXCLUIR -->|Grava timestamp de auditoria| REG_INATIVO
+    end
+```
