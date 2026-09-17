@@ -63,6 +63,7 @@ flowchart TD
 - [02 - Histórico de Decisões de Arquitetura (ADRs)](docs/02-adrs/)
 - [03 - Arquitetura de Infraestrutura e Topologia](docs/03-arquitetura-infra/topologia-camadas-e-fluxos.md)
 - [04 - Padrões de Backend e Persistência TypeORM](docs/04-padroes-backend/orm-e-acesso-a-dados.md)
+  - [Otimização, Cache Redis e Performance](docs/04-padroes-backend/otimizacao-e-performance.md)
 - [05 - Padrões de Frontend Vue 3](docs/05-padroes-frontend/estrutura-vue.md)
 - [06 - Padrões de Banco, Multi-Tenancy e RLS](docs/06-padroes-dados/politicas-rls.md)
 - [07 - Automação e IoT Industrial](docs/07-automacao-e-iot/barramento-mqtt.md)
