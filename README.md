@@ -59,7 +59,7 @@ flowchart TD
 
 ## Índice da Documentação
 
-* [Padrões de Acesso a Dados (TypeORM)](docs/04-padroes-backend/orm-e-acesso-a-dados.md)
-* [Convenções de Banco, UUIDv7 e Índices](docs/06-padroes-dados/convencoes-banco.md)
-* [Estratégia Multi-Tenancy (Isolamento por unit_id)](docs/06-padroes-dados/estrategia-multi-tenancy.md)
-* [Topologia de Camadas e Fluxos de Servidor](docs/03-arquitetura-infra/topologia-camadas-e-fluxos.md)
+- [Padrões de Acesso a Dados (TypeORM)](docs/04-padroes-backend/orm-e-acesso-a-dados.md)
+- [Convenções de Banco, UUIDv7 e Índices](docs/06-padroes-dados/convencoes-banco.md)
+- [Estratégia Multi-Tenancy (Isolamento por unit_id)](docs/06-padroes-dados/estrategia-multi-tenancy.md)
+- [Topologia de Camadas e Fluxos de Servidor](docs/03-arquitetura-infra/topologia-camadas-e-fluxos.md)
